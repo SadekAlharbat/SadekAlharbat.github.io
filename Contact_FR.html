@@ -1,0 +1,413 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+		<title>Contact (ALHARBAT)</title>
+		<link rel="stylesheet" href="./css/persistent_main.css" type="text/css" media="screen"/>
+		<link rel="stylesheet" href="./css/persistent_main_tables.css" type="text/css" media="screen"/>
+		<link rel="stylesheet" href="./css/font-sizes/m_main.css" type="text/css" title="fsm-csd" media="screen"/>
+		<link rel="stylesheet" href="./css/color-schemes/d_main.css" type="text/css" title="fsm-csd" media="screen"/>
+		<link rel="stylesheet" href="./css/font-sizes/m_main_tables.css" type="text/css" title="fsm-csd" media="screen"/>
+		<link rel="stylesheet" href="./css/color-schemes/d_main_tables.css" type="text/css" title="fsm-csd" media="screen"/>
+		<script type="text/javascript" src="javascript/cookies.js"></script>
+		<script type="text/javascript" src="javascript/basicTools.js"></script>
+		<script type="text/javascript" src="javascript/common.js"></script>
+		<script type="text/javascript" src="javascript/WebBuilder.js"></script>
+	</head>
+	
+	<style type="text/css">
+		#modalContainer {
+			background-color:transparent;
+			position:absolute;
+			width:100%;
+			height:100%;
+			top:0px;
+			left:0px;
+			z-index:10000;
+			background-image:url(tp.png); /* required by MSIE to prevent actions on lower z-index elements */
+		}
+		#alertBox {
+			position:relative;
+			width:300px;
+			min-height:100px;
+			margin-top:50px;
+			border:2px solid #000;
+			background-color:#F2F5F6;
+			background-image:url(alert.png);
+			background-repeat:no-repeat;
+			background-position:20px 30px;
+		}
+		#modalContainer > #alertBox {
+			position:fixed;
+		}
+		#alertBox h1 {
+			margin:0;
+			font:bold 1.5em verdana,arial;
+			background-color:#78919B;
+			color:#FFF;
+			border-bottom:1px solid #000;
+			padding:2px 0 2px 5px;
+		}
+		#alertBox p {
+			font:1.2em verdana,arial;
+			height:50px;
+			padding-left:5px;
+			margin-left:55px;
+		}
+		#alertBox #closeBtn {
+			display:block;
+			position:relative;
+			margin:5px auto;
+			padding:3px;
+			border:2px solid #000;
+			width:70px;
+			font:0.7em verdana,arial;
+			text-transform:uppercase;
+			text-align:center;
+			color:#FFF;
+			background-color:#78919B;
+			text-decoration:none;
+		}
+		/* unrelated styles */
+		#mContainer {
+			position:relative;
+			width:600px;
+			margin:auto;
+			padding:5px;
+			border-top:2px solid #000;
+			border-bottom:2px solid #000;
+			font:0.7em verdana,arial;
+		}
+		h1,h2 {
+			margin:0;
+			padding:4px;
+			font:bold 1.5em verdana;
+			border-bottom:1px solid #000;
+		}
+		code {
+			font-size:1.2em;
+			color:#069;
+		}
+		#credits {
+			position:relative;
+			margin:25px auto 0px auto;
+			width:350px; 
+			font:0.7em verdana;
+			border-top:1px solid #000;
+			border-bottom:1px solid #000;
+			height:90px;
+			padding-top:4px;
+		}
+		#credits img {
+			float:left;
+			margin:5px 10px 5px 0px;
+			border:1px solid #000000;
+			width:80px;
+			height:79px;
+		}
+		.important {
+			background-color:#F5FCC8;
+			padding:2px;
+		}
+		code span {
+			color:green;
+		}
+	</style>
+	
+<!--	<script type="text/javascript"> 
+		function anti_clic()
+		 {
+			alert('Sorry right click is disabled in this site ...');
+			return false;
+		 }document.onmousedown=BoutonDroit; 
+	</script>	-->
+	
+	<script language="Javascript">
+		/* desactiver Ctrl Alt - disable Ctrl Alt */
+		function alert_keycode(){ if (event.keyCode == 17 || event.keyCode == 18) { alert("do not copy please") } } document.onkeydown=alert_keycode
+	</script>
+	
+	
+	<script type="text/javascript">
+		var ALERT_TITLE = "Oops!";
+		var ALERT_BUTTON_TEXT = "Ok";
+		if(document.getElementById) {
+			 window.alert = function(txt) {
+			 createCustomAlert(txt);
+			}
+		}
+		function createCustomAlert(txt) {
+			d = document;
+			if(d.getElementById("modalContainer")) return;
+			mObj = d.getElementsByTagName("body")[0].appendChild(d.createElement("div"));
+			mObj.id = "modalContainer";
+			mObj.style.height = d.documentElement.scrollHeight + "px";
+			alertObj = mObj.appendChild(d.createElement("div"));
+			alertObj.id = "alertBox";
+			if(d.all && !window.opera) alertObj.style.top = document.documentElement.scrollTop + "px";
+			alertObj.style.left = (d.documentElement.scrollWidth - alertObj.offsetWidth)/2 + "px";
+			alertObj.style.visiblity="visible";
+			h1 = alertObj.appendChild(d.createElement("h1"));
+			h1.appendChild(d.createTextNode(ALERT_TITLE));
+			msg = alertObj.appendChild(d.createElement("p"));
+			//msg.appendChild(d.createTextNode(txt));
+			msg.innerHTML = txt;
+			btn = alertObj.appendChild(d.createElement("a"));
+			btn.id = "closeBtn";
+			btn.appendChild(d.createTextNode(ALERT_BUTTON_TEXT));
+			btn.href = "#";
+			btn.focus();
+			btn.onclick = function() { removeCustomAlert();return false; }
+			alertObj.style.display = "block";
+		}
+		function removeCustomAlert() {
+			document.getElementsByTagName("body")[0].removeChild(document.getElementById("modalContainer"));
+		}
+	</script>
+	
+	<script type="text/javascript">
+		function getIndex(){
+		 var x=document.getElementById("pdown_1");
+		 if (x.value == "Ch1") {alert('Please select an item'); return false;}
+		 //if (x.value == "Ch2") {var oldLocation = window.location;	window.location = "https://syrte4.obspm.fr/webmail/src/webmail.php"; }
+		 if (x.value == "Ch2") {window.open('https://syrte4.obspm.fr/webmail/src/webmail.php');}
+		 if (x.value == "Ch3") {window.open('https://iersweb.obspm.fr/');}
+		 if (x.value == "Ch4") {window.open('http://dl.dropbox.com/u/7437808/Google_site/Pdf/Modele_Commandes_base.pdf');}
+		 if (x.value == "Ch5") {window.open('https://dl.dropboxusercontent.com/u/31328964/LaTeX%20Equation%20Editor/LaTeX%20Equation%20Editor%20for%20Writing%20Maths%20on%20the%20Internet.htm');}
+		 if (x.value == "Ch6") {window.open('http://hpiers.obspm.fr/webiers/');}
+		 if (x.value == "Ch7") {window.open('https://sites.google.com/site/SadekALHARBAT/');}
+		 if (x.value == "Ch8") {window.open('http://www.flyordie.com/jeu/echecs.html');}
+		 if (x.value == "Ch9") {window.open('https://upload.obspm.fr/upload/');}
+		 <!--YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY4-->
+		 <!--YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY5-->
+		 <!--YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY6-->
+		 <!--YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY7-->
+		 <!--YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY8-->
+		 <!--YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY9-->
+		
+		
+		}
+	</script>
+	
+	<script type="text/javascript">
+		var z87IdA = ["bl87k1","bl87k2","bl87k3","bl87k4","bl87k5","bl87k6","bl87k7","bl87k8","bl87k9","bl87k10","bl87k11","bl87k12","bl87k13"];
+		var z87DurA = [0,2,2,4,1,1,1,0,0,0,0,0,0];
+		var z87ColorsA = [['#FF0000','#FFCCCC'],['#00FF00','#004400'],['#0000FF','#CCCCFF'],['#FF00FF','#FFCCFF'],['#00FFFF','#0000FF'],['#FFFF00','#FF0000'],['#00FFFF','#0000FF'],['#FFFFFF','#CCCCFF','#8888FF','#4444FF','#0000FF'],['#FFFFFF','#FFCCCC','#FF8888','#FF4444','#FF0000'],['#FFFFFF','#FFCCCC','#FF8888','#FF4444','#FF0000'],['#FFFFFF','#CCFFCC','#88FF88','#44FF44','#00FF00'],['#FFFFFF','#CCCCFF','#8888FF','#4444FF','#0000FF'],['#FFFFFF','#FCFFCF','#F8FF8F','#F4FF4F','#F0FF0F'] ];
+		var z87InitWaitA = [0,0,0,0,0,0,0,0,0,0,0,0,0];
+		var z87TimesA = [1,1,1,1,1,1,1,1,1,1,1,1,1];
+		var z87WaitA = [0,0,0,0,0,0,0,0,0,0,0,0,0];
+		function z87bi() 
+		{ 
+		  // static types  
+		  if ( typeof z87bi.z87ADurCnt == 'undefined' ) 
+		{ 
+			z87bi.z87ADurCnt = new Array(z87IdA.length); 
+			z87bi.z87AStepCnt = new Array(z87IdA.length); 
+			z87bi.z87ATimesCnt = new Array(z87IdA.length); 
+			z87bi.z87AWaitCnt = new Array(z87IdA.length); 
+			for (var IdCnt = 0; IdCnt < z87IdA.length; IdCnt++) 
+			{
+			z87bi.z87ADurCnt[IdCnt] = 1000;
+			z87bi.z87AStepCnt[IdCnt] = 0;
+			 z87bi.z87ATimesCnt[IdCnt] = z87TimesA[IdCnt];
+			 z87bi.z87AWaitCnt[IdCnt] = z87InitWaitA[IdCnt];
+			}
+		} 		  
+
+			for (var IdCnt = 0; IdCnt < z87IdA.length; IdCnt++) 
+			{                
+				z87Object = document.getElementById( z87IdA[IdCnt] );			 
+			    if (--z87bi.z87AWaitCnt[IdCnt] <= 0 )
+			    {
+				   if (++z87bi.z87ADurCnt[IdCnt] < z87DurA[IdCnt]) 
+					{  
+					} 
+					else 
+					{ 
+						z87bi.z87ADurCnt[IdCnt] = 0;
+						z87Colors = z87ColorsA[IdCnt];
+						if (++z87bi.z87AStepCnt[IdCnt] < z87Colors.length) {} else 
+						{ 
+							z87bi.z87AStepCnt[IdCnt] = 0;
+							if (--z87bi.z87ATimesCnt[IdCnt] <= 0)
+							{					
+							z87bi.z87ATimesCnt[IdCnt] = z87TimesA[IdCnt];
+							z87bi.z87AWaitCnt[IdCnt] = z87WaitA[IdCnt];							
+							}					
+						}
+						z87Color = z87Colors[z87bi.z87AStepCnt[IdCnt]];   
+						if ( (z87Color=='visible') || (z87Color=='hidden') )
+						{
+							z87Object.style.visibility = z87Color; 
+						}
+						else  
+						{
+							z87Object.style.color = z87Color; 
+							z87Object.style.visibility = 'visible'; 
+						}
+					} //else
+				} // if wait
+			} // for
+			 
+			setTimeout('z87bi()',100);
+			}
+			if (window.addEventListener) window.addEventListener('load', z87bi, false);
+			else if (window.attachEvent) window.attachEvent('onload', z87bi);
+			else window.onload=z87bi;
+			// Joomtrax blink plugin by Dimmen Gestel
+			var z118IdA = ["bl118k1","bl118k2"];
+			var z118DurA = [0,0];
+			var z118ColorsA = [['#0000FF','#CCCCFF'],['#00FF00','#CCFFCC'] ];
+			var z118InitWaitA = [0,0];
+			var z118TimesA = [1,1];
+			var z118WaitA = [0,0];
+
+			function z118bi() 
+			{ 
+				// static types  
+				if ( typeof z118bi.z118ADurCnt == 'undefined' ) 
+				{ 
+					z118bi.z118ADurCnt = new Array(z118IdA.length); 
+					z118bi.z118AStepCnt = new Array(z118IdA.length); 
+					z118bi.z118ATimesCnt = new Array(z118IdA.length); 
+					z118bi.z118AWaitCnt = new Array(z118IdA.length); 
+					for (var IdCnt = 0; IdCnt < z118IdA.length; IdCnt++) 
+					{
+						z118bi.z118ADurCnt[IdCnt] = 1000;
+						z118bi.z118AStepCnt[IdCnt] = 0;
+						z118bi.z118ATimesCnt[IdCnt] = z118TimesA[IdCnt];
+						z118bi.z118AWaitCnt[IdCnt] = z118InitWaitA[IdCnt];
+					}
+				} 		  
+
+				for (var IdCnt = 0; IdCnt < z118IdA.length; IdCnt++) 
+				{                
+					z118Object = document.getElementById( z118IdA[IdCnt] );			 
+
+					if (--z118bi.z118AWaitCnt[IdCnt] <= 0 )
+					{
+						if (++z118bi.z118ADurCnt[IdCnt] < z118DurA[IdCnt]) 
+						{  
+						} 
+						else 
+						{ 
+							z118bi.z118ADurCnt[IdCnt] = 0;
+							z118Colors = z118ColorsA[IdCnt];
+							if (++z118bi.z118AStepCnt[IdCnt] < z118Colors.length) {} else 
+							{ 
+								z118bi.z118AStepCnt[IdCnt] = 0;
+								if (--z118bi.z118ATimesCnt[IdCnt] <= 0)
+								{					
+									z118bi.z118ATimesCnt[IdCnt] = z118TimesA[IdCnt];
+									z118bi.z118AWaitCnt[IdCnt] = z118WaitA[IdCnt];							
+								}					
+							}
+							z118Color = z118Colors[z118bi.z118AStepCnt[IdCnt]];   
+							if ( (z118Color=='visible') || (z118Color=='hidden') )
+							{
+								z118Object.style.visibility = z118Color; 
+							}
+							else  
+							{
+								z118Object.style.color = z118Color; 
+								z118Object.style.visibility = 'visible'; 
+							}
+						} //else
+					} // if wait
+				} // for
+			 
+				setTimeout('z118bi()',100);
+			}
+			if (window.addEventListener) window.addEventListener('load', z118bi, false);
+			else if (window.attachEvent) window.attachEvent('onload', z118bi);
+			else window.onload=z118bi;
+			// Joomtrax blink plugin by Dimmen Gestel
+			// test flashing text all the yext
+			// 		<span id="bl87k1"> </span>
+			// 		<span id="bl87k2"> </span>
+			// 		<span id="bl87k7"> </span>
+			// 		<span id="bl87k9"> </span>
+			// 		<span id="bl87k3"> </span>
+			// 		<span id="bl87k4"> </span>
+			// 		<span id="bl87k8"> </span>
+			// 		<span id="bl87k5"> </span>
+			// 		<span id="bl87k6"> </span>
+			// 		<span id="bl87k10"> </span>
+			// 		<span id="bl87k11"> </span>
+			// 		<span id="bl87k12"> </span>
+			// 		<span id="bl87k13"> </span>
+  </script>
+  
+	<body onContextMenu="return anti_clic();"  onselectstart=" return false" ondragstart=" return false"  onload="mainOnload('client',1000)" onUnload="mainOnunload()">
+		<!---------------------------------------------------------------------------------------------------->
+		<!----  rolling_text ----->
+		<marquee bgcolor=AliceBlue loop="10" scrollamount="2.5" width="100%" DIRECTION="left">
+		<!--<font color=AliceBlue size="+1"> </font>-->
+		<font color="RGB(12,52,61)" face="times new roman" style="font-size:20px" >
+			 		</font> 
+		</marquee>
+		<!---------------------------------------------------------------------------------------------------->
+
+		<div id="banner1">
+			<div id="banner1ASETEP">
+				<a class="colorSystemLink" href="Sadek_EN.html" title="Sadek AL HARBAT"><font face="times new roman" style="font-size:38px"> Sadek Salem AL HARBAT </font> </a>
+			</div>
+			
+ 
+			<!---------------------------------------------------------------------------------------------------->
+			<!----  Menu ----->
+			<div id="menu12">
+				<div id="tabsH">
+					<ul>
+						<!--<li><a title="Sadek AL HARBAT"><span class="colorMenuActive1" >Welcome:&nbsp;</span></a></li>-->
+						<li><a href="Contact_EN.html" title="Sadek AL HARBAT"> <span class="colorMenu"><font size="12" ><div class="image"><IMG SRC="Photo/EN.GIF"  border="7" style="border-color:red;"  width="50" height="30"></div></font></span> </a></li>
+						<li><a href="Contact_FR.html" title="Sadek AL HARBAT"> <span class="colorMenu"><font size="12" ><div class="image"><IMG SRC="Photo/FR.GIF"  border="7" style="border-color:transparent;" width="50" height="30"></div></font></span> </a></li>						
+					</ul>
+				</div>
+			</div>
+			<!---------------------------------------------------------------------------------------------------->
+
+			<!---------------------------------------------------------------------------------------------------->
+			<!----  Menu ----->
+			<div id="menu11">
+				<div id="tabsH">
+					<ul>
+						<!--<li><a title="Sadek AL HARBAT"><span class="colorMenuActive1" >Welcome:&nbsp;</span></a></li>-->
+												<li><a href="PhD_FR.html" title="Th se"><span class="colorMenu"><font face="times new roman" style="font-size:16px"> Th&egrave;se</font></span></a></li>
+						<li><a href="Publications_FR.html" title="Publications"><span class="colorMenu"><font face="times new roman" style="font-size:16px"> Publications </font></span></a></li>
+						<li><a href="Research_FR.html" title="Recherche"><span class="colorMenu"><font face="times new roman" style="font-size:16px"> Recherche </font></span></a></li>
+						<li><a href="Contact_FR.html" title="Contact"><span class="colorMenu"><font face="times new roman" style="font-size:16px"> Contact </font></span></a></li>
+					</ul>
+				</div>
+			</div>
+			<!---------------------------------------------------------------------------------------------------->	
+			<!---------------------------------------------------------------------------------------------------->
+				<br/><br/>
+				<font face="times new roman" style="font-size:35px; line-height:30px;position: absolute;" >
+					<p id="lettrinetext">
+						<a class="colorSystemLink" href="Sadek_FR.html" title="Sadek ALHARBAT"><font face="times new roman" style="font-size:30px; line-height:30px;" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sadek Salem ALHARBAT </font></a>
+					</p>
+				</font>
+				<br/><br/><br/>
+				<br/><br/><br/><br/>
+				<img src="Photo/ma_photo.JPG" title="Sadek AL HARBAT" border="3" width="320" height="320"></img>							<br/><br/><br/><br/><br/><br/>
+				<div id="textStitle1">
+				  <p><strong> Universit&eacute; </strong> : Paris-Diderot-Paris 7 <br/><br/>
+				    <strong> Laboratoire </strong>: IMJ-PRG Institut de Math&eacute;matiques de Jussieu-Paris Rive Gauche <br/><br/>
+		          <strong>  Equipe  </strong>:   Groupes, Repr&eacute;sentations et G&eacute;om&eacute;trie<br/><br/> 
+				  </p>
+				  <p><br/>
+				  <br/>
+	                <strong> Adresse courriel  </strong>:					sadikharbat    --at--  math.univ-paris-diderot.fr  
+					<br/><br/>					
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+					<br/><br/>
+					<br/><br/>	
+				</p>
+				<br/><br/><br/><br/><br/><br/>
+				  </p>
+          </div>	
+			</div>
+		</div>
+	</body>
+</html>

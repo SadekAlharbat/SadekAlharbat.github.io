@@ -1,0 +1,177 @@
+<!--<script type="text/javascript" >location.href="https://dl.dropboxusercontent.com/u/31328964/Page_Perso_Sadek/EN/Sadek_EN.html";</script>
+<script type="text/javascript" >location.href="https://sites.google.com/site/saljbaaefr/";</script>
+
+<script type="text/javascript" > var oldLocation = window.location;	window.location = "https://dl.dropboxusercontent.com/u/31328964/Page_Perso_Sadek/EN/Sadek_EN.html";</script>
+
+-->
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" >
+	<head>
+
+
+	<script type="text/javascript">
+		var z87IdA = ["bl87k1","bl87k2","bl87k3","bl87k4","bl87k5","bl87k6","bl87k7","bl87k8","bl87k9","bl87k10","bl87k11","bl87k12","bl87k13"];
+		var z87DurA = [0,2,2,4,1,1,1,0,0,0,0,0,0];
+		var z87ColorsA = [['#FF0000','#FFCCCC'],['#00FF00','#004400'],['#0000FF','#CCCCFF'],['#FF00FF','#FFCCFF'],['#00FFFF','#0000FF'],['#FFFF00','#FF0000'],['#00FFFF','#0000FF'],['#FFFFFF','#CCCCFF','#8888FF','#4444FF','#0000FF'],['#FFFFFF','#FFCCCC','#FF8888','#FF4444','#FF0000'],['#FFFFFF','#FFCCCC','#FF8888','#FF4444','#FF0000'],['#FFFFFF','#CCFFCC','#88FF88','#44FF44','#00FF00'],['#FFFFFF','#CCCCFF','#8888FF','#4444FF','#0000FF'],['#FFFFFF','#FCFFCF','#F8FF8F','#F4FF4F','#F0FF0F'] ];
+		var z87InitWaitA = [0,0,0,0,0,0,0,0,0,0,0,0,0];
+		var z87TimesA = [1,1,1,1,1,1,1,1,1,1,1,1,1];
+		var z87WaitA = [0,0,0,0,0,0,0,0,0,0,0,0,0];
+		function z87bi() 
+		{ 
+		  // static types  
+		  if ( typeof z87bi.z87ADurCnt == 'undefined' ) 
+		{ 
+			z87bi.z87ADurCnt = new Array(z87IdA.length); 
+			z87bi.z87AStepCnt = new Array(z87IdA.length); 
+			z87bi.z87ATimesCnt = new Array(z87IdA.length); 
+			z87bi.z87AWaitCnt = new Array(z87IdA.length); 
+			for (var IdCnt = 0; IdCnt < z87IdA.length; IdCnt++) 
+			{
+			z87bi.z87ADurCnt[IdCnt] = 1000;
+			z87bi.z87AStepCnt[IdCnt] = 0;
+			 z87bi.z87ATimesCnt[IdCnt] = z87TimesA[IdCnt];
+			 z87bi.z87AWaitCnt[IdCnt] = z87InitWaitA[IdCnt];
+			}
+		} 		  
+
+			for (var IdCnt = 0; IdCnt < z87IdA.length; IdCnt++) 
+			{                
+				z87Object = document.getElementById( z87IdA[IdCnt] );			 
+			    if (--z87bi.z87AWaitCnt[IdCnt] <= 0 )
+			    {
+				   if (++z87bi.z87ADurCnt[IdCnt] < z87DurA[IdCnt]) 
+					{  
+					} 
+					else 
+					{ 
+						z87bi.z87ADurCnt[IdCnt] = 0;
+						z87Colors = z87ColorsA[IdCnt];
+						if (++z87bi.z87AStepCnt[IdCnt] < z87Colors.length) {} else 
+						{ 
+							z87bi.z87AStepCnt[IdCnt] = 0;
+							if (--z87bi.z87ATimesCnt[IdCnt] <= 0)
+							{					
+							z87bi.z87ATimesCnt[IdCnt] = z87TimesA[IdCnt];
+							z87bi.z87AWaitCnt[IdCnt] = z87WaitA[IdCnt];							
+							}					
+						}
+						z87Color = z87Colors[z87bi.z87AStepCnt[IdCnt]];   
+						if ( (z87Color=='visible') || (z87Color=='hidden') )
+						{
+							z87Object.style.visibility = z87Color; 
+						}
+						else  
+						{
+							z87Object.style.color = z87Color; 
+							z87Object.style.visibility = 'visible'; 
+						}
+					} //else
+				} // if wait
+			} // for
+			 
+			setTimeout('z87bi()',100);
+			}
+			if (window.addEventListener) window.addEventListener('load', z87bi, false);
+			else if (window.attachEvent) window.attachEvent('onload', z87bi);
+			else window.onload=z87bi;
+			// Joomtrax blink plugin by Dimmen Gestel
+			var z118IdA = ["bl118k1","bl118k2"];
+			var z118DurA = [0,0];
+			var z118ColorsA = [['#0000FF','#CCCCFF'],['#00FF00','#CCFFCC'] ];
+			var z118InitWaitA = [0,0];
+			var z118TimesA = [1,1];
+			var z118WaitA = [0,0];
+
+			function z118bi() 
+			{ 
+				// static types  
+				if ( typeof z118bi.z118ADurCnt == 'undefined' ) 
+				{ 
+					z118bi.z118ADurCnt = new Array(z118IdA.length); 
+					z118bi.z118AStepCnt = new Array(z118IdA.length); 
+					z118bi.z118ATimesCnt = new Array(z118IdA.length); 
+					z118bi.z118AWaitCnt = new Array(z118IdA.length); 
+					for (var IdCnt = 0; IdCnt < z118IdA.length; IdCnt++) 
+					{
+						z118bi.z118ADurCnt[IdCnt] = 1000;
+						z118bi.z118AStepCnt[IdCnt] = 0;
+						z118bi.z118ATimesCnt[IdCnt] = z118TimesA[IdCnt];
+						z118bi.z118AWaitCnt[IdCnt] = z118InitWaitA[IdCnt];
+					}
+				} 		  
+
+				for (var IdCnt = 0; IdCnt < z118IdA.length; IdCnt++) 
+				{                
+					z118Object = document.getElementById( z118IdA[IdCnt] );			 
+
+					if (--z118bi.z118AWaitCnt[IdCnt] <= 0 )
+					{
+						if (++z118bi.z118ADurCnt[IdCnt] < z118DurA[IdCnt]) 
+						{  
+						} 
+						else 
+						{ 
+							z118bi.z118ADurCnt[IdCnt] = 0;
+							z118Colors = z118ColorsA[IdCnt];
+							if (++z118bi.z118AStepCnt[IdCnt] < z118Colors.length) {} else 
+							{ 
+								z118bi.z118AStepCnt[IdCnt] = 0;
+								if (--z118bi.z118ATimesCnt[IdCnt] <= 0)
+								{					
+									z118bi.z118ATimesCnt[IdCnt] = z118TimesA[IdCnt];
+									z118bi.z118AWaitCnt[IdCnt] = z118WaitA[IdCnt];							
+								}					
+							}
+							z118Color = z118Colors[z118bi.z118AStepCnt[IdCnt]];   
+							if ( (z118Color=='visible') || (z118Color=='hidden') )
+							{
+								z118Object.style.visibility = z118Color; 
+							}
+							else  
+							{
+								z118Object.style.color = z118Color; 
+								z118Object.style.visibility = 'visible'; 
+							}
+						} //else
+					} // if wait
+				} // for
+			 
+				setTimeout('z118bi()',100);
+			}
+			if (window.addEventListener) window.addEventListener('load', z118bi, false);
+			else if (window.attachEvent) window.attachEvent('onload', z118bi);
+			else window.onload=z118bi;
+			// Joomtrax blink plugin by Dimmen Gestel
+  </script>
+
+ 	<body>
+ 
+		<span id="bl87k1">This blinks Red</span>
+		<p> </p>
+		<span id="bl87k2">This blinks Green</span>
+		<p> </p>
+		<span id="bl87k7">Hello1</span>
+		<p> </p>
+		<span id="bl87k9">üúæ¼ĝƋʥᏊኙᘙẼ</span>
+		
+		<span id="bl87k3"> </span>
+		<span id="bl87k4"> </span>
+		<span id="bl87k8"> </span>
+		<span id="bl87k5"> </span>
+		<span id="bl87k6"> </span>
+		<span id="bl87k10"> </span>
+		<span id="bl87k11"> </span>
+		<span id="bl87k12"> </span>
+		<span id="bl87k13"> </span>
+<
+
+
+
+
+
+
+
+	</body> 
+</html>
